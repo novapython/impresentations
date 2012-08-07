@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>impress.js presentation</title>
+    <style>
+      .impress-supported .fallback-message {
+         display:none;
+      }
+      .big {
+        width: 600px;
+        text-align: center;
+        font-size: 60px;
+        line-height: 1;
+      }
+
+      .tiny {
+         width: 800px;
+         text-align: center;
+         font-size: 20px;
+         line-height: 1;
+      }
+
+      .pull-left {
+         text-align: left;
+      }
+
+      .step {
+        width: 900px;
+        padding: 40px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing:    border-box;
+        -ms-box-sizing:     border-box;
+        -o-box-sizing:      border-box;
+        box-sizing:         border-box;
+        font-family: 'Inika', serif;
+        font-size: 48px;
+        line-height: 1.5;
+      }
+
+      /* fade out inactive slides */
+
+      .step {
+        -webkit-transition: opacity 1s;
+        -moz-transition:    opacity 1s;
+        -ms-transition:     opacity 1s;
+        -o-transition:      opacity 1s;
+        transition:         opacity 1s;
+      }
+      .step:not(.active) {
+        opacity: 0.3;
+      }
+
+    </style>
+  </head>
+  <body class="impress-not-supported" >
+    <div class="fallback-message" >
+      <p>impress.js not supported</p>
+    </div>
+    <div id="impress" >
+      <div class="step big" data-x="1000" data-y="250"> Loose Coupling </div>
+      <div class="step" data-rotate="90" data-x="1900" data-y="1100"> Models </div>
+      <div class="step" data-rotate="90" data-x="1200" data-y="1100"> Views </div>
+      <div class="step" data-rotate="90" data-x="500" data-y="1100"> Templates </div>
+      <div class="step" data-x="3000" data-y="500" style="background-image:url(mvt.png); background-repeat: no-repeat; height: 800px"> &nbsp; </div>
+
+      <div class="step" data-x="3300" data-y="2000" data-scale="5" style="font-size: 80px" > URL Setup </div>
+      <div class="step" data-x="1200" data-y="2300" data-scale="2"> http://yoursite.com/index.html </div>
+      <div class="step" data-x="1200" data-y="2500" data-scale="2" style="font-size:25px"> url(r'^index.html$', index) </div>
+      <div class="step" data-x="-400" data-y="0" data-rotate="270" style="font-size: 60px"> What is a regex? </div>
+      <div class="step" data-x="1200" data-y="2600" data-scale="2" style="font-size:25px"> url(r'^person/$', person_index) </div>
+      <div class="step" data-x="1200" data-y="2700" data-scale="2" style="font-size:25px"> url(r'^person/(?P<band_id>\d+)/$', person_detail) </div>
+      <div class="step" data-x="1200" data-y="2800" data-scale="2" style="font-size:25px"> url(r'^animal/$', index) </div>
+
+    </div>
+
+    <script src = "js/impress.js" > </script>
+    <script> impress().init(); </script>
+  </body>
+</html>
