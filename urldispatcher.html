@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Loose Coupling</title>
+    <title>URL Dispatcher</title>
     <style>
     body { background:#092e20; color: white;}
     .title {
@@ -10,10 +10,6 @@
         line-height: 1.1em
     }
 a, a:hover, a:visited {text-decoration: underline; color: #9999FF;}
-      .impress-supported .fallback-message {
-         display:none;
-      }
-
       .impress-supported .fallback-message {
          display:none;
       }
@@ -68,15 +64,20 @@ a, a:hover, a:visited {text-decoration: underline; color: #9999FF;}
       <p>impress.js not supported</p>
     </div>
     <div id="impress" >
-      <div class="step" data-x="0" data-y="-1000" style="background-image:url(omg-db.png); background-repeat: no-repeat; height: 800px"> &nbsp; </div>
-      <div class="step" data-x="1600" data-y="-1000" style="background-image:url(omg-views.png); background-repeat: no-repeat; height: 800px"> &nbsp; </div>
+      <div class="title step" data-x="5300" data-y="1000" data-scale="5" style="font-size: 80px" > URL Dispatcher </div>
+      <div class="step" data-x="1200" data-y="2300" data-scale="2"> http://yoursite.com/index.html </div>
+      <div class="step" data-x="1200" data-y="2500" data-scale="2" style="font-size:25px"> url(r'^index.html$', index) </div>
+      <div class="step" data-x="3700" data-y="2300" data-scale="2"> http://yoursite.com/person </div>
+      <div class="step" data-x="3700" data-y="2500" data-scale="2" style="font-size:25px"> url(r'^person/$', person) </div>
+      <div class="step" data-x="6200" data-y="2300" data-scale="2"> http://yoursite.com/person/demetri </div>
+      <div class="step" data-x="6200" data-y="2500" data-scale="2" style="font-size:25px"> url(r'^person/(\w)$', person_detail) </div>
+      <div class="step" data-x="-400" data-y="0" data-rotate="270" style="font-size: 60px"> What is a regex? </div>
+      <div class="step" data-x="-300" data-y="0" data-rotate="270" style="font-size: 60px"> <a href="http://www.regexpal.com"> http://www.regexpal.com</a> </div>
+      <div class="step" data-x="1800" data-y="3900" data-scale="1" style="background-image:url(urls.png); background-repeat: no-repeat; height: 800px"> &nbsp; </div>
+      <div class="step" data-x="1800" data-y="4700" data-scale="1" style="background-image:url(urls2.png); background-repeat: no-repeat; height: 800px"> &nbsp; </div>
 
-      <div class="step big" data-x="1000" data-y="250" data-scale="3"> Loose Coupling </div>
-      <div class="step" data-rotate="90" data-x="1900" data-y="1100"> Models </div>
-      <div class="step" data-rotate="90" data-x="1200" data-y="1100"> Views </div>
-      <div class="step" data-rotate="90" data-x="500" data-y="1100"> Templates </div>
-      <div class="step" data-x="3000" data-y="500" style="background-image:url(mvt.png); background-repeat: no-repeat; height: 800px"> &nbsp; </div>
     </div>
+
     <script src = "js/impress.js" > </script>
     <script> impress().init(); </script>
   </body>

@@ -1,0 +1,35 @@
+<pre>
+Tools
+
+Format code:
+http://xzfv.appspot.com/s/format.html
+
+Cheeseshop:
+http://pypi.python.org/pypi
+
+Regular Expression Tester
+http://www.regexpal.com
+http://www.petefreitag.com/cheatsheets/regex/
+
+
+</pre>
+ # Handle an exact match URL
+ # http://yoursite.com/articles/2003
+ (r'^articles/2003/$', 'news.views.special_case_2003'),
+
+ # Handle a URL containing ONLY a 4 digit year
+ # http://yoursite.com/articles/2012
+ (r'^articles/(\d{4})/$', 'news.views.year_archive'),
+
+ # Handle a URL containing a 4 digit year, and a 2 digit month
+ # http://yoursite.com/articles/2012/08
+ (r'^articles/(\d{4})/(\d{2})/$', 'news.views.month_archive'),
+
+ # Handle a URL containing a 4 digit year, 2 digit month
+ # and an unknown amount of digits for the day
+ # http://yoursite.com/articles/2012/08/1
+ #  OR
+ # http://yoursite.com/articles/2012/08/12
+ (r'^articles/(\d{4})/(\d{2})/(\d+)/$', 'news.views.article_detail')
+
+# Handle

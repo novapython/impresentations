@@ -1,0 +1,20 @@
+ass="highlight"><pre> <span style="color: #408080; font-style: italic"># Handle an exact match URL</span>
+ <span style="color: #408080; font-style: italic"># http://yoursite.com/articles/2003</span>
+  (<span style="color: #BA2121">r&#39;^articles/2003/$&#39;</span>, <span style="color: #BA2121">&#39;news.views.special_case_2003&#39;</span>),
+
+   <span style="color: #408080; font-style: italic"># Handle a URL containing ONLY a 4 digit year</span>
+    <span style="color: #408080; font-style: italic"># http://yoursite.com/articles/2012</span>
+     (<span style="color: #BA2121">r&#39;^articles/(\d{4})/$&#39;</span>, <span style="color: #BA2121">&#39;news.views.year_archive&#39;</span>),
+
+      <span style="color: #408080; font-style: italic"># Handle a URL containing a 4 digit year, and a 2 digit month</span>
+       <span style="color: #408080; font-style: italic"># http://yoursite.com/articles/2012/08</span>
+        (<span style="color: #BA2121">r&#39;^articles/(\d{4})/(\d{2})/$&#39;</span>, <span style="color: #BA2121">&#39;news.views.month_archive&#39;</span>),
+
+         <span style="color: #408080; font-style: italic"># Handle a URL containing a 4 digit year, 2 digit month</span>
+          <span style="color: #408080; font-style: italic"># and an unknown amount of digits for the day</span>
+           <span style="color: #408080; font-style: italic"># http://yoursite.com/articles/2012/08/1</span>
+            <span style="color: #408080; font-style: italic">#  OR</span>
+             <span style="color: #408080; font-style: italic"># http://yoursite.com/articles/2012/08/12</span>
+              (<span style="color: #BA2121">r&#39;^articles/(\d{4})/(\d{2})/(\d+)/$&#39;</span>, <span style="color: #BA2121">&#39;news.views.article_detail&#39;</span>)
+              </pre></div>
+
